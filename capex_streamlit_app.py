@@ -92,7 +92,7 @@ def get_monthly_ipc_detail(start_date, end_date, ipc_df):
 
     first_month = start_date.replace(day=1)
     end_of_month = end_date.replace(day=1) + pd.offsets.MonthEnd(1)
-    months = pd.date_range(start=first_month, end=end_of_month, freq="M")
+    months = pd.date_range(start=first_month, end=end_of_month, freq="ME")
 
     detail_rows = []
     adjustment_factor = 1.0
